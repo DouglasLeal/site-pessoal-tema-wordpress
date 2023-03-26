@@ -45,6 +45,11 @@ body {
     opacity: 0.75;
 }
 
+#wpadminbar{
+    position: fixed;
+    top: 0;
+}
+
 .navbar {
     border-bottom: 3px solid #228dff;
     position: fixed;

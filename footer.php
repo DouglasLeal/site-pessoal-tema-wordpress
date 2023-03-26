@@ -1,5 +1,5 @@
 <footer>
-    <p class="footer-copy">&copy; 2023 - Desenvolvido por <span>Douglas Leal</span></p>
+    <p class="footer-copy">&copy; <?= date("Y") ?> - Desenvolvido por <span>Douglas Leal</span></p>
 
     <div class="footer-contatos">
         <a href="#"><i class="far fa-envelope"></i> contato@douglasleal.com.br</a>
