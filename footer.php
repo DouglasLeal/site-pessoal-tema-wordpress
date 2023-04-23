@@ -1,4 +1,4 @@
-c<footer>
+<footer>
     <p class="footer-copy">&copy; <?= date("Y") ?> - Desenvolvido por <span>Douglas Leal</span></p>
 
     <div class="footer-contatos">

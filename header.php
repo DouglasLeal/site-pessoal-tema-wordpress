@@ -17,51 +17,35 @@
 </head>
 
 <body id="inicio">
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="./">
-                <p class="navbar-brand-titulo">Douglas Leal</p>
-                <p class="navbar-brand-subtitulo"><i class="navbar-brand-icone fa-solid fa-code"></i> Desenvolvedor web
-                </p>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="./">
+            <p class="navbar-brand-titulo">Douglas Leal</p>
+            <p class="navbar-brand-subtitulo"><i class="navbar-brand-icone fa-solid fa-code"></i> Desenvolvedor web
+            </p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="box-icones">
-                    <span class="navbar-toggler-icone"></span>
-                    <span class="navbar-toggler-icone"></span>
-                    <span class="navbar-toggler-icone"></span>
-                </div>
-            </button>
-            <?php
-            if (has_nav_menu('menu_principal')) {
-                wp_nav_menu([
-                    'theme_location' => 'menu_principal',
-                    'depth' => 1, // 1 = no dropdowns, 2 = with dropdowns.
-                    'container' => 'div',
-                    'container_class' => 'collapse navbar-collapse',
-                    'container_id' => 'navbarResponsive',
-                    'menu_class' => 'navbar-nav ms-auto',
-                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker' => new WP_Bootstrap_Navwalker(),
-                ]);
-            }
-            ?>
-        </div>
-    </nav>
+            <div class="box-icones">
+                <span class="navbar-toggler-icone"></span>
+                <span class="navbar-toggler-icone"></span>
+                <span class="navbar-toggler-icone"></span>
+            </div>
+        </button>
+        <?php
+        if (has_nav_menu('menu_principal')) {
+            wp_nav_menu([
+                'theme_location' => 'menu_principal',
+                'depth' => 1, // 1 = no dropdowns, 2 = with dropdowns.
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'navbarResponsive',
+                'menu_class' => 'navbar-nav ms-auto',
+                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                'walker' => new WP_Bootstrap_Navwalker(),
+            ]);
+        }
+        ?>
+    </div>
+</nav>
 
-    <section class="banner">
-        <div class="container">
-            <h1 class="banner-titulo">Precisando de um site para marcar presença no mundo digital?</h1>
-
-            <p class="banner-texto">Cada vez mais pessoas utilizam a internet em busca de produtos e serviços, aumente
-                sua
-                visibilidade na internet, exponha seus produtos e serviços 24 horas por dia e seja encontrado por novos
-                clientes.</p>
-
-            <a class="banner-icone" href="#">
-                <i class="fa-solid fa-angles-down"></i>
-            </a>
-        </div>
-    </section>
-</header>

@@ -1,6 +1,22 @@
 <?php
 get_header();
 ?>
+    <header>
+        <section class="banner">
+            <div class="container">
+                <h1 class="banner-titulo">Precisando de um site para marcar presença no mundo digital?</h1>
+
+                <p class="banner-texto">Cada vez mais pessoas utilizam a internet em busca de produtos e serviços, aumente
+                    sua
+                    visibilidade na internet, exponha seus produtos e serviços 24 horas por dia e seja encontrado por novos
+                    clientes.</p>
+
+                <a class="banner-icone" href="#">
+                    <i class="fa-solid fa-angles-down"></i>
+                </a>
+            </div>
+        </section>
+    </header>
 
     <section class="sobre secao" id="sobre">
         <div class="container">

@@ -318,6 +318,11 @@ footer .footer-contatos a i {
     color: #228dff;
 }
 
+.blog{
+    min-height: calc(100vh - 132px);
+    padding-top: 150px;
+}
+
 @media screen and (min-width: 1024px) {
     .banner .container {
         gap: 100px;
