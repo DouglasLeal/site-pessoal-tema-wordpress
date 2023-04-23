@@ -11,46 +11,42 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
           integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body id="inicio">
 <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./">
                 <p class="navbar-brand-titulo">Douglas Leal</p>
-                <p class="navbar-brand-subtitulo"><i class="navbar-brand-icone fa-solid fa-code"></i> Desenvolvedor web</p>
+                <p class="navbar-brand-subtitulo"><i class="navbar-brand-icone fa-solid fa-code"></i> Desenvolvedor web
+                </p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="box-icones">
                     <span class="navbar-toggler-icone"></span>
                     <span class="navbar-toggler-icone"></span>
                     <span class="navbar-toggler-icone"></span>
                 </div>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                </ul>
-            </div>
+            <?php
+            if (has_nav_menu('menu_principal')) {
+                wp_nav_menu([
+                    'theme_location' => 'menu_principal',
+                    'depth' => 1, // 1 = no dropdowns, 2 = with dropdowns.
+                    'container' => 'div',
+                    'container_class' => 'collapse navbar-collapse',
+                    'container_id' => 'navbarResponsive',
+                    'menu_class' => 'navbar-nav ms-auto',
+                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                ]);
+            }
+            ?>
         </div>
     </nav>
 
@@ -58,7 +54,8 @@
         <div class="container">
             <h1 class="banner-titulo">Precisando de um site para marcar presença no mundo digital?</h1>
 
-            <p class="banner-texto">Cada vez mais pessoas utilizam a internet em busca de produtos e serviços, aumente sua
+            <p class="banner-texto">Cada vez mais pessoas utilizam a internet em busca de produtos e serviços, aumente
+                sua
                 visibilidade na internet, exponha seus produtos e serviços 24 horas por dia e seja encontrado por novos
                 clientes.</p>
 

@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-    <section class="sobre secao">
+    <section class="sobre secao" id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-6">
@@ -40,7 +40,7 @@ get_header();
         </div>
     </section>
 
-    <section class="servicos secao">
+    <section class="servicos secao" id="servicos">
         <h2 class="secao-titulo">
             Serviços
         </h2>
@@ -60,7 +60,7 @@ get_header();
                 <div class="col-sm-12 col-lg-4">
                     <div class="card servico-item">
                         <div class="card-body">
-                            <i class="servico-icone fas fa-laptop-code"></i>
+                            <i class="servico-icone fa-solid fa-mobile-screen-button"></i>
                             <h3 class="servico-titulo">Design Responsivo</h3>
                             <p class="servico-texto">Seu site estará pronto para diversos tamanhos de tela, seja
                                 computador, tablet ou
@@ -71,7 +71,7 @@ get_header();
                 <div class="col-sm-12 col-lg-4 col-lg-4 offset-lg-2">
                     <div class="card servico-item">
                         <div class="card-body">
-                            <i class="servico-icone fas fa-laptop-code"></i>
+                            <i class="servico-icone fas fa-search"></i>
                             <h3 class="servico-titulo">SEO</h3>
                             <p class="servico-texto">Quer ser encontrado no Google? Seu site será otimizado para ser
                                 encontrado pelos
@@ -82,7 +82,7 @@ get_header();
                 <div class="col-sm-12 col-lg-4">
                     <div class="card servico-item">
                         <div class="card-body">
-                            <i class="servico-icone fas fa-laptop-code"></i>
+                            <i class="servico-icone fas fa-cog"></i>
                             <h3 class="servico-titulo">Suporte e manutenção</h3>
                             <p class="servico-texto">Precisando de ajustes, correções, atualização de recursos, trocar
                                 ou adicionar
@@ -94,7 +94,7 @@ get_header();
         </div>
     </section>
 
-    <section class="secao portfolio">
+    <section class="secao portfolio" id="portfolio">
         <h2 class="secao-titulo">
             Portfolio
         </h2>
@@ -134,7 +134,7 @@ get_header();
         </div>
     </section>
 
-    <section class="contato secao">
+    <section class="contato secao" id="contato">
         <h2 class="secao-titulo">Contato</h2>
 
         <div class="container">
