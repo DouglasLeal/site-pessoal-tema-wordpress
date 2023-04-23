@@ -6,7 +6,7 @@ get_header();
         <div class="container">
             <h1 class="secao-titulo mb-5">Blog</h1>
 
-            <div class="row gy-3">
+            <div class="posts row gy-3">
                 <?php
                 $loop = new WP_Query(['post_type' => 'post']);
                 if ($loop->have_posts()): ?>

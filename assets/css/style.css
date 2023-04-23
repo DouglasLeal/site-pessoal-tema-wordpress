@@ -324,28 +324,28 @@ footer .footer-contatos a i {
     padding-bottom: 75px;
 }
 
-.blog .card{
+.posts .card{
     border: 3px solid #228dff;
     background-color: #242424;
 }
 
-.blog ul{
+.posts ul{
     list-style: none;
 }
 
-.blog li{
+.posts li{
     border: 2px solid #228dff;
     border-radius: 5px;
 }
 
-.blog li a{
+.posts li a{
     text-decoration: none;
     color: #228dff;
     border-radius: 5px;
     padding: 5px 10px;
 }
 
-.blog li:hover{
+.posts li:hover{
     background-color: #fff;
 }
 

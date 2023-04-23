@@ -150,6 +150,38 @@ get_header();
         </div>
     </section>
 
+    <section class="posts secao">
+        <h2 class="secao-titulo mb-5">
+            Últimos Posts
+        </h2>
+        <div class="container">
+            <div class="row">
+            <?php
+            query_posts('posts_per_page=3');
+            if (have_posts()): ?>
+                <?php while (have_posts()): ?>
+                    <?php the_post(); ?>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="img-fluid mb-3"
+                                     src="<?= get_the_post_thumbnail_url(); ?>"
+                                     alt="">
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p><?= get_the_date(); ?></p>
+                                    <?php the_category(); ?>
+                                </div>
+                                <h2 class="text-center py-3"><?php the_title() ?></h2>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+        </div>
+    </section>
+
     <section class="contato secao" id="contato">
         <h2 class="secao-titulo">Contato</h2>
 
